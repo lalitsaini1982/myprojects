@@ -1,0 +1,52 @@
+{
+  "name": "coinswich-trading-bot",
+  "version": "1.0.0",
+  "description": "Advanced cryptocurrency trading bot with multiple strategies",
+  "main": "main.js",
+  "homepage": "./",
+  "private": true,
+  "dependencies": {
+    "electron-squirrel-startup": "^1.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "axios": "^1.6.0",
+    "chart.js": "^4.4.0",
+    "react-chartjs-2": "^5.2.0",
+    "ta-lib": "^0.4.28",
+    "dotenv": "^16.3.1",
+    "websocket": "^1.0.34",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4",
+    "react-scripts": "5.0.1",
+    "@craco/craco": "^7.1.0"
+  },
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "electron-dev": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-build": "npm run react-build && electron-builder",
+    "start": "electron-dev",
+    "build": "npm run electron-build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
